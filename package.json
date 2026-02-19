@@ -1,0 +1,30 @@
+{
+  "name": "real-estate-marketplace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./backend/index.js",
+    "dev": "nodemon ./backend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jev-Smith/Real-Estate-Marketplace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Jev-Smith/Real-Estate-Marketplace/issues"
+  },
+  "homepage": "https://github.com/Jev-Smith/Real-Estate-Marketplace#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
