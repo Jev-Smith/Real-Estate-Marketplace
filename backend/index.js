@@ -8,8 +8,21 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 
+//routes
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
+
+//middleware
+app.use((err, _, res, next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || "Internal server eror";
+
+    res.status(statusCode).json({
+        success: false,
+        statusCode,
+        message
+    })
+})
 
 mongoose.connect(process.env.MONGO).then(() => {
     console.log("Database connected");
